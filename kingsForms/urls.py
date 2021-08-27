@@ -5,4 +5,5 @@ app_name = 'kingsForms'
 
 urlpatterns = [
     path('', views.home, name="home")
+
 ]

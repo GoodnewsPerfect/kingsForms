@@ -16,7 +16,6 @@
           border-radius: 50%;
           -webkit-border-radius: 30px;
         }
-
     </style>
 </head>
 <body>
@@ -26,24 +25,19 @@
 </div>
 
 <center>
-    <p class="text-white">
-        LW FS TEACHERS SUMMIT REGISTRATION
+    <p>
+  <h1 class="text-white">LW FS TEACHERS SUMMIT REGISTRATION</h1>
     </p>
 </center>
-    <div class="container">
-        <div class="home-container">
-            <div class="mb-3">
-                <strong>  <label for="formGroupExampleInput" class="form-label text-black">Title</label> </strong>>
-            <select class="form-select" aria-label="Default select example">
-            <option selected>Select a value</option>
-            <option value="1">Zonal Director</option>
-            <option value="2">Zonal Secretary</option>
-            <option value="3">Group Pastor</option>
-            <option value="3">Chapter Pastor</option>
-            <option value="3">Asst Chapter Pastor</option>
-                <option value="3">Cell Leader</option>
-        </select>
-            <label for="formGroupExampleInput" class="form-label text-danger">Required*</label>
+
+<form method="post">
+{% csrf_token %}
+<div class="container">
+    <div class="home-container">
+        <div class="mb-3">
+      <strong><label class="text-black">Title</label></strong>
+        {{ form.as_p }}
+            <label class="text-danger">Required*</label>
         </div>
     </div>
 </div>
@@ -51,9 +45,9 @@
 <div class="container">
     <div class="home-container">
         <div class="mb-3">
-            <strong>   <label for="formGroupExampleInput" class="form-label text-black">Full Name</label> </strong>>
-                <input type="text" class="form-control" id="inputCity">
-            <label for="formGroupExampleInput" class="form-label text-danger">Required*</label>
+      <strong><label class="text-black">Full Name</label></strong>
+                {{ form1.as_p }}
+            <label class="text-danger">Required*</label>
         </div>
     </div>
 </div>
@@ -61,9 +55,9 @@
 <div class="container">
     <div class="home-container">
         <div class="mb-3">
-            <strong>  <label for="formGroupExampleInput" class="form-label text-black">KingsChat Number</label> </strong>>
-                <input type="text" class="form-control" id="inputCity">
-            <label for="formGroupExampleInput" class="form-label text-danger">Required*</label>
+      <strong><label class="text-black">KingsChat Number</label></strong>
+                {{ form2.as_p }}
+            <label class="text-danger">Required*</label>
         </div>
     </div>
 </div>
@@ -71,9 +65,9 @@
 <div class="container">
     <div class="home-container">
         <div class="mb-3">
-            <strong> <label for="formGroupExampleInput" class="form-label text-black">Active KC ID</label> </strong>>
-                <input type="text" class="form-control" id="inputCity">
-            <label for="formGroupExampleInput" class="form-label text-danger">Required*</label>
+      <strong><label class="text-black">Active KC ID</label></strong>
+                {{ form3.as_p }}
+            <label class="text-danger">Required*</label>
         </div>
     </div>
 </div>
@@ -81,50 +75,9 @@
 <div class="container">
     <div class="home-container">
         <div class="mb-3">
-            <strong>   <label for="formGroupExampleInput" class="form-label text-black">Zone</label> </strong>>
-        <select class="form-select" aria-label="Default select example">
-                <option selected>Select a value</option>
-                <option value="NIGERIA ZONE A">NIGERIA ZONE A</option>
-                <option value="NIGERIA ZONE B">NIGERIA ZONE B</option>
-                <option value="NIGERIA ZONE C">NIGERIA ZONE C</option>
-                <option value="NIGERIA ZONE D">NIGERIA ZONE D</option>
-                <option value="NIGERIA ZONE E">NIGERIA ZONE E</option>
-                <option value="NIGERIA ZONE F">NIGERIA ZONE F</option>
-                <option value="NGERIA ZONE G"> NIGERIA ZONE G</option>
-                <option value="NIGERIA ZONE H">NIGERIA ZONE H</option>
-                <option value="NIGERIA ZONE I">NIGERIA ZONE I</option>
-                <option value="NIGERIA ZONE J">NIGERIA ZONE J</option>
-                <option value="NIGERIA ZONE K">NIGERIA ZONE K</option>
-                <option value="NIGERIA ZONE L">NIGERIA ZONE L</option>
-                <option value="UK ZONE A">UK ZONE A </option>
-                <option value="UK ZONE B">UK ZONE B</option>
-                <option value="GHANA ZONE A">GHANA ZONE A</option>
-                <option value="GHANA ZONE B">GHANA ZONE B</option>
-                <option value="SOUTH AFRICA ZONE A">SOUTH AFRICA ZONE A</option>
-                <option value="ESOUTH AFRICA ZONE B">ESOUTH AFRICA ZONE B</option>
-                <option value="SOUTH AFRICA ZONE C">SOUTH AFRICA ZONE C</option>
-                <option value="SOUTH AFRICA ZONE D">SOUTH AFRICA ZONE D</option>
-                <option value="SOUTH AFRICA ZONE E">SOUTH AFRICA ZONE E</option>
-                <option value="KENYA ZONE">KENYA ZONE</option>
-                <option value="USA GROUP 1">USA GROUP 1</option>
-                <option value="USA GROUP 2">USA GROUP 2</option>
-                <option value="USA GROUP 3">USA GROUP 3</option>
-                <option value="USA GROUP 4">USA GROUP 4</option>
-                <option value="CAMEROON GROUP 1">CAMEROON GROUP 1</option>
-                <option value="CAMEROON GROUP 2">CAMEROON GROUP 2</option>
-                <option value=" UGANDA GROUP">UGANDA GROUP</option>
-                <option value="BLW INTERNATIONAL MISSIONS">BLW INTERNATIONAL MISSIONS</option>
-                <option value="SIERRA LEONE GROUP">SIERRA LEONE GROUP</option>
-                <option value="ETHIOPIA GROUP">ETHIOPIA GROUP</option>
-                <option value="SECOND TIER CHURCHES">SECOND TIER CHURCHES</option>
-                <option value="CANADA CHAPTERS">CANADA CHAPTERS</option>
-                <option value="NORTH CYPRUS CHAPTERS">NORTH CYPRUS CHAPTERS</option>
-                <option value="EUROPE CHAPTERS">EUROPE CHAPTERS</option>
-                <option value="ASIA CHAPTERS">ASIA CHAPTERS</option>
-                <option value="MIDDLE EAST CHAPTERS">MIDDLE EAST CHAPTERS</option>
-                <option value="OCEANIA CHAPTERS">OCEANIA CHAPTERS</option>
-        </select>
-            <label for="formGroupExampleInput" class="form-label text-danger">Required*</label>
+      <strong><label class="text-black">Zone</label></strong>
+        {{ form4.as_p }}
+            <label class="text-danger">Required*</label>
         </div>
     </div>
 </div>
@@ -132,20 +85,25 @@
 <div class="container">
     <div class="home-container">
         <div class="mb-3">
-            <strong>   <label for="formGroupExampleInput" class="form-label text-black">Church</label> </strong>>
-                <input type="text" class="form-control" id="inputCity">
-            <label for="formGroupExampleInput" class="form-label text-danger">Required*</label>
+            <strong><label class="text-black">Church</label></strong>
+                {{ form5.as_p }}
+            <label class="text-danger">Required*</label>
         </div>
     </div>
 </div>
 
-<div class="container form-check">
-    <div class="home-container">
+<div class="container">
+    <div class="home-container-1">
         <div class="mb-3">
-            <strong>  <label for="formGroupExampleInput" class="form-label text-black">Did you attend the 1st Edition of
-                the Teachers Summit? If yes, How did the Training impact you? What has changed for you and for your work as a Teacher?</label> </strong>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-                <label for="formGroupExampleInput" class="form-label text-danger">Required* </label>
+      <strong>
+        <label class="text-black">Did you attend the 1st Edition of the Teachers Summit?</label>
+      </strong>
+        {{ form6.as_p }}
+            <label class="text-danger">Required*</label>
+      <p><strong>
+        <label class="text-black">If yes, How did the Training impact you? What has changed for you and for your work as a Teacher?</label>
+      </strong></p>
+          {{ form9.as_p }}
         </div>
     </div>
 </div>
@@ -153,13 +111,9 @@
 <div class="container">
     <div class="home-container">
         <div class="mb-3">
-            <strong>  <label for="formGroupExampleInput" class="form-label text-black">Have you been Certified?</label> </strong>>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Select a value</option>
-            <option value="1">Yes</option>
-            <option value="2">No</option>
-        </select>
-            <label for="formGroupExampleInput" class="form-label text-danger">Required*</label>
+      <strong><label class="text-black">Have you been Certified?</label></strong>
+        {{ form7.as_p }}
+            <label class="text-danger">Required*</label>
         </div>
     </div>
 </div>
@@ -167,13 +121,9 @@
 <div class="container">
     <div class="home-container">
         <div class="mb-3">
-            <strong>  <label for="formGroupExampleInput" class="form-label text-black">Do you have a Badge?</label> </strong>>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Select a value</option>
-            <option value="1">Yes</option>
-            <option value="2">No</option>
-        </select>
-            <label for="formGroupExampleInput" class="form-label text-danger">Required*</label>
+      <strong><label class="text-black">Do you have a Badge?</label></strong>
+        {{ form8.as_p }}
+            <label class="text-danger">Required*</label>
         </div>
     </div>
 </div>
@@ -181,21 +131,23 @@
 <!--<div class="container">-->
 <!--    <div class="home-container">-->
 <!--        <div class="mb-3">-->
-<!--          <strong>    <label for="formGroupExampleInput" class="form-label text-black">If you attended the 1st Edition-->
-<!--              of the Teachers Summit: How did the Training impact you? What has changed for you and for your work as a Teacher?</label> </strong>-->
-<!--                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>-->
-<!--            <label for="formGroupExampleInput" class="form-label text-danger">Required*</label>-->
+<!--            <strong>-->
+<!--              <label class="text-black">If you attended the 1st Edition of the Teachers Summit: How did the Training impact you? What has changed for you and for your work as a Teacher?</label>-->
+<!--            </strong>-->
+<!--                {{ form9.as_p }}-->
+<!--            <label class="text-danger">Required*</label>-->
 <!--        </div>-->
 <!--    </div>-->
 <!--</div>-->
 
 <div class="container">
-    <div class="home-container">
+    <div class="home-container-2">
         <div class="mb-3">
-            <strong>  <label for="formGroupExampleInput" class="form-label text-black">Do you have any question or
-                issues to be addressed as regarding your work? (Kindly state briefly)</label> </strong>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-            <label for="formGroupExampleInput" class="form-label text-danger">Required*</label>
+            <strong>
+              <label class="text-black">Do you have any question or issues to be addressed as regarding your work? (Kindly state briefly)</label>
+            </strong>
+                {{ form10.as_p }}
+            <label class="text-danger">Required*</label>
         </div>
     </div>
 </div>
@@ -205,13 +157,15 @@
         <div class="mb-3">
         <button class="btn btn-primary" type="submit">Submit</button>
         </div>
-            <hr style="color:grey;">
+            <hr style="color: grey;">
         <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label text-danger">Never submit passwords through KingsForms.
+            <label class="text-danger">Never submit passwords through KingsForms.
                 <br> This content is neither created nor endorsed by KingsForms.</label>
         </div>
     </div>
 </div>
+</form>
+
 
 <footer class="footer mt-auto">
   <div class="text-center">
